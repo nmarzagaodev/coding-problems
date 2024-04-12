@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cc=gcc
+cflags='-Wall -O2'
+out=bubble-sort
+
+$cc -o $out $cflags *.c
