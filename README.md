@@ -2,6 +2,7 @@
 
 Just some classic programming problems I found online.
 
-### Problem List
+### Implementations
 - Fizz Buzz
 - Bubble Sort
+- Stacks
