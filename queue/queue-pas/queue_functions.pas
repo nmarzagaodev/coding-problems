@@ -1,6 +1,6 @@
-program QueueImplementation;
+unit queue_functions;
 
-uses sysutils;
+interface
 
 type
   QueueNodePtr = ^QueueNode;
@@ -15,6 +15,15 @@ type
     first: QueueNodePtr;
     last:  QueueNodePtr;
   end;
+
+function QueueNode_create(node_value: string): QueueNodePtr;
+function Queue_create(): QueuePtr;
+function Queue_isEmpty(my_queue: QueuePtr): boolean;
+procedure Queue_enqueue(my_queue: QueuePtr; new_node: QueueNodePtr);
+function Queue_dequeue(my_queue: QueuePtr): QueueNodePtr;
+procedure Queue_print(my_queue: QueuePtr);
+
+implementation
 
 function QueueNode_create(node_value: string): QueueNodePtr;
 var
@@ -131,25 +140,4 @@ begin
   end;
 end;
 
-var
-  my_queue: QueuePtr;
-  first_value: QueueNodePtr;
-
-begin
-  writeln('Testing Creting a Queue.');
-
-  my_queue := Queue_create();
-
-  Queue_enqueue(my_queue, QueueNode_create('A'));
-  Queue_enqueue(my_queue, QueueNode_create('B'));
-  Queue_enqueue(my_queue, QueueNode_create('C'));
-
-  Queue_print(my_queue);
-
-  first_value := Queue_dequeue(my_queue);
-  writeln(format('Dequeued Value: %s', [first_value^.value]));
-
-  Queue_print(my_queue);
-
-  dispose(my_queue);
 end.

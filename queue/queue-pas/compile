@@ -1,0 +1,40 @@
+#!/bin/bash
+
+compile() {
+    echo "Compiling..."
+    fpc queue_functions.pas
+    fpc queue_tests.pas
+    echo "Compilation complete."
+}
+
+
+clean() {
+    echo "Cleaning..."
+    rm -f queue_tests *.ppu *.o
+    echo "Clean complete."
+}
+
+
+test() {
+    echo "Running tests..."
+    ./queue_tests
+}
+
+
+case "$1" in
+    compile)
+        compile
+        ;;
+    clean)
+        clean
+        ;;
+    test)
+        test
+        ;;
+    *)
+        echo "Usage: $0 {compile|clean|test}"
+        exit 1
+        ;;
+esac
+
+exit 0
