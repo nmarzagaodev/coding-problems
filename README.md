@@ -6,3 +6,4 @@ Just some classic programming problems I found online.
 - Fizz Buzz
 - Bubble Sort
 - Stacks
+- Queue
