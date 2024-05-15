@@ -7,3 +7,4 @@ Just some classic programming problems I found online.
 - Bubble Sort
 - Stacks
 - Queue
+- List
