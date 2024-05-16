@@ -17,7 +17,7 @@ class List {
     }
 
     get_length() {
-        if (this.is_empty) {
+        if (this.is_empty()) {
             return 0;
         }
 
@@ -94,3 +94,6 @@ class List {
         return target;
     }
 }
+
+module.exports = List;
+module.exports = ListNode;
