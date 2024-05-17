@@ -16,9 +16,11 @@ create procedure ExibirNomesClientes()
 begin
 	declare fim int default false; -- variavel para sinalizar o termino do cursor
 	declare cliente_nome varchar(255); -- variavel para armazenar o nome do cliente
+	
 	-- declaração do cursor para selecionar todos os nomes de clientes
 	declare cursor_clientes cursor for
 	select nome_cliente from clientes;
+	
 	-- manipulador para percorrer o cursor
 	declare continue handler for not found set fim = true;
 	
@@ -30,7 +32,7 @@ begin
 		if fim then
 			leave read_loop;
 		end if;
-		
+		-- Exibir o nome do cliente
 		select cliente_nome as 'Nome do Cliente';
 	end loop;
     
@@ -38,5 +40,5 @@ begin
     
 end//
 delimiter ;
-    
+
 call ExibirNomesClientes();
