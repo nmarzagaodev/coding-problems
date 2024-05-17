@@ -4,7 +4,7 @@ use aula;
 
 create table clientes (
 	id_cliente int auto_increment primary key,
-    nome_cliente varchar(255)
+    	nome_cliente varchar(255)
 );
 
 insert into clientes (nome_cliente) values ('joão'), ('julia'), ('flavio'), ('sérgio'), ('aníbal'), ('doris');
@@ -14,17 +14,17 @@ insert into clientes (nome_cliente) values ('joão'), ('julia'), ('flavio'), ('s
 delimiter //
 create procedure ExibirNomesClientes()
 begin
-    declare fim int default false; -- variavel para sinalizar o termino do cursor
-    declare cliente_nome varchar(255); -- variavel para armazenar o nome do cliente
-    -- declaração do cursor para selecionar todos os nomes de clientes
-    declare cursor_clientes cursor for
-    select nome_cliente from clientes;
-    -- manipulador para percorrer o cursor
-    declare continue handler for not found set fim = true;
+	declare fim int default false; -- variavel para sinalizar o termino do cursor
+	declare cliente_nome varchar(255); -- variavel para armazenar o nome do cliente
+	-- declaração do cursor para selecionar todos os nomes de clientes
+	declare cursor_clientes cursor for
+	select nome_cliente from clientes;
+	-- manipulador para percorrer o cursor
+	declare continue handler for not found set fim = true;
 	
-    open cursor_clientes;
+	open cursor_clientes;
     
-    read_loop: LOOP
+	read_loop: LOOP
 		fetch cursor_clientes into cliente_nome;
 		
 		if fim then
