@@ -14,7 +14,7 @@ insert into clientes (nome_cliente) values ('joão'), ('julia'), ('flavio'), ('s
 delimiter //
 create procedure ExibirNomesClientes()
 begin
-	declare fim int default false; -- variavel para sinalizar o termino do cursor
+    declare fim int default false; -- variavel para sinalizar o termino do cursor
     declare cliente_nome varchar(255); -- variavel para armazenar o nome do cliente
     -- declaração do cursor para selecionar todos os nomes de clientes
     declare cursor_clientes cursor for
