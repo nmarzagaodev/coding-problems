@@ -4,7 +4,7 @@ Welcome to the Coding Problems Repository! This repository serves as a collectio
 
 ## Technologies Used
 
-The problems and tasks in this repository are implemented using a variety of programming languages, showcasing versatility and proficiency across different tech stacks. Some of the technologies utilized include:
+The problems and tasks in this repository are implemented using a variety of programming languages, showcasing versatility and proficiency across different tech stacks. Some of the technologies utilized include (I plan on adding more):
 
 - C
 - Rust
@@ -17,7 +17,7 @@ The problems and tasks in this repository are implemented using a variety of pro
 
 ## Problems/Tasks Tackled
 
-This repository covers a wide range of coding problems and tasks, organized into directories based on the problem domain or the data structure/algorithm being implemented. Some of the problems/tasks tackled include:
+This repository covers a wide range of coding problems and tasks, organized into directories based on the problem domain or the data structure/algorithm being implemented. Some of the problems/tasks tackled include (I plan on adding more):
 
 - **Bubble Sort**: Implementation of the classic sorting algorithm.
 - **Doubly Linked List**: Implementation of a doubly linked list.
@@ -37,5 +37,5 @@ These are just a few examples of the tasks covered in this repository. Feel free
 
 This repository is licensed under the MIT License. You are free to use, modify, distribute, and/or commercialize the code in this repository for any purpose, with or without attribution, as long as the original copyright notice and disclaimer are included.
 
-Happy coding! 🚀
+Happy coding!
 
