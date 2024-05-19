@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Its just faster
+
+kotlinc $1 -include-runtime -d $2.jar
