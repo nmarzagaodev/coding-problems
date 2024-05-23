@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// write it recursively later
+
 bool binary_search(vector<int> nums, int target) {
     int left_index, mid_index = 0;
     int right_index = nums.size() - 1;
