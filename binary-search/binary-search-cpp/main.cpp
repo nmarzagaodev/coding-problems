@@ -11,12 +11,10 @@ bool binary_search(vector<int> nums, int target) {
 
     while (left_index <= right_index) {
         mid_index = floor((left_index + right_index) / 2);
-        if (nums[mid_index] < target) 
-            left_index = mid_index + 1;
-        else if (nums[mid_index] > target) 
-            right_index = mid_index - 1;
-        else
-            return true;
+        
+        if (nums[mid_index] < target) left_index = mid_index + 1;
+        else if (nums[mid_index] > target) right_index = mid_index - 1;
+        else return true;
     }
     
     return false;
